@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETWORK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #00000 !important;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #0, 0, 0 !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd166 !important;
+}
+
+.header {
+    background: url('WIFI1.png') no-repeat center center/cover;
+    padding: 5rem 0;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    font-family: "Segoe UI"
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Logo Header Styles */
+.logo-header {
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #2980b9;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #ffd166;
+    border-color: #ffd166;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Form Section Styles */
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.form-label {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border-color: #ddd;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ffd166;
+    box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+}
+
+button[type="submit"],
+button[type="button"] {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+/* Contact Section Styles */
+.contact {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    padding: 2rem 0;
+}
+
+.contact h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.contact .btn {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact .btn-whatsapp {
+    background-color: #25d366;
+    color: #ffffff;
+   
+}
+
+.contact .btn-whatsapp:hover {
+    background-color: #128c7e;
+    transform: translateY(-5px);
+}
+
+.contact .btn-telegram {
+    background-color: #0088cc;
+    color: #ffffff;
+}
+
+.contact .btn-telegram:hover {
+    background-color: #005f99;
+    transform: translateY(-5px);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ADIT WIFI.OP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    
+     <header class="logo-header">
+    <img src="WIFI1.png" alt="Logo" class="logo">
+</header>
+
+    
+    <header class="header">
+        <div class="container">
+            <h1>Tentang kami</h1>
+            <p>""Menuju Masa Depan Terhubung: Pemimpin Peringkat WiFi. Bergabunglah dengan Layanan Terbaik untuk Koneksi Tanpa Batas dan Akses Cepat ke Dunia Digital.""</p>
+        </div>
+    </header>
+
+    <!-- Produk Section -->
+    <section id="produk" class="container my-5">
+        <div class="text-center mb-5">
+            <h2>Paket WiFi Kami</h2>
+            <p>Pilih paket yang sesuai dengan kebutuhan Anda</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Wifi.png" class="card-img-top" alt="Paket 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket 1</h5>
+                        <p class="card-text">Kecepatan hingga 10 Mbps. Harga Rp 100.000/bulan.</p>
+                        <button class="btn btn-primary" onclick="showForm('Paket 1', 'Rp 100.000/bulan')">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Wifi.png" class="card-img-top" alt="Paket 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket 2</h5>
+                        <p class="card-text">Kecepatan hingga 20 Mbps. Harga Rp 150.000/bulan.</p>
+                        <button class="btn btn-primary" onclick="showForm('Paket 2', 'Rp 150.000/bulan')">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Wifi.png" class="card-img-top" alt="Paket 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket 3</h5>
+                        <p class="card-text">Kecepatan hingga 50 Mbps. Harga Rp 250.000/bulan.</p>
+                        <button class="btn btn-primary" onclick="showForm('Paket 3', 'Rp 250.000/bulan')">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulir Pembelian Section -->
+    <section id="formPembelian" class="form-section container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Formulir Pembelian WiFi</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <textarea class="form-control" id="alamat" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="noRekening" class="form-label">Nomor Rekening</label>
+                                <input type="text" class="form-control" id="noRekening" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="metodePembayaran" class="form-label">Metode Pembayaran</label>
+                                <select class="form-select" id="metodePembayaran" required>
+                                    <option value="" disabled selected>Pilih metode pembayaran</option>
+                                    <option value="Transfer Bank">Transfer Bank</option>
+                                    <option value="Kartu Kredit">Kartu Kredit</option>
+                                    <option value="e-Wallet">e-Wallet</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="paket" class="form-label">Paket Pilihan</label>
+                                <input type="text" class="form-control" id="paket" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="harga" class="form-label">Harga</label>
+                                <input type="text" class="form-control" id="harga" readonly>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
+                            <button type="button" class="btn btn-secondary" onclick="hideForm()">Batal</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="footer text-center">
+      
+<!-- Contact Section -->
+<section id="contact" class="contact py-5">
+    <div class="container">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan, jangan ragu untuk menghubungi kami melalui:</p>
+        <a href="https://wa.me/083851267592" class="btn btn-whatsapp">WhatsApp</a>
+        <a href="https://t.me/ADITWFI" class="btn btn-telegram">Telegram</a>
+    </div>
+</section>
+     
+     
+        <p>&copy; 2024 K NETWORK. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showForm(paket, harga) {
+            document.getElementById('paket').value = paket;
+            document.getElementById('harga').value = harga;
+            document.getElementById('formPembelian').classList.add('active');
+        }
+
+        function hideForm() {
+            document.getElementById('formPembelian').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
