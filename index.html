@@ -10,11 +10,15 @@
 /* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);
+    background: linear-gradient(135deg, #2980b9 0%, #0000FF 100%);
     color: #ffffff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    products .card-body {
+    background-image: url('WIFI1.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .navbar {
@@ -197,7 +201,7 @@ button[type="button"] {
 /* Contact Section Styles */
 .contact {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(1, 0, 0, 0.9);
     color: #ffffff;
     padding: 2rem 0;
 }
@@ -222,7 +226,7 @@ button[type="button"] {
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.8s, transform 0.3s;
 }
 
 .contact .btn-whatsapp {
@@ -244,6 +248,16 @@ button[type="button"] {
 .contact .btn-telegram:hover {
     background-color: #005f99;
     transform: translateY(-5px);
+}
+
+/* CSS untuk mengubah latar belakang menu pembelian menjadi gambar */
+.products .card-body {
+    background-image: url('WIFI1.p');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 10px 10px; /* Menyesuaikan radius sudut */
+    padding: 20px; /* Menyesuaikan ruang di sekitar teks */
+    color: #fff; /* Warna teks yang kontras dengan gambar */
 }
 
     </style>
@@ -295,30 +309,30 @@ button[type="button"] {
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="Wifi.png" class="card-img-top" alt="Paket 1">
+                    <img src="lgwifi.png" class="card-img-top" alt="Paket 1">
                     <div class="card-body">
                         <h5 class="card-title">Paket 1</h5>
-                        <p class="card-text">Kecepatan hingga 10 Mbps. Harga Rp 100.000/bulan.</p>
-                        <button class="btn btn-primary" onclick="showForm('Paket 1', 'Rp 100.000/bulan')">Beli Sekarang</button>
+                        <p class="card-text">Kecepatan hingga 10 Mbps. Harga Rp 50.000/bulan.</p>
+                        <button class="btn btn-primary" onclick="showForm('Paket 1', 'Rp 50.000/bulan')">Beli Sekarang</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="Wifi.png" class="card-img-top" alt="Paket 2">
+                    <img src="lgwifi.png" class="card-img-top" alt="Paket 2">
                     <div class="card-body">
                         <h5 class="card-title">Paket 2</h5>
-                        <p class="card-text">Kecepatan hingga 20 Mbps. Harga Rp 150.000/bulan.</p>
+                        <p class="card-text">Kecepatan hingga 30 Mbps. Harga Rp 150.000.00/bulan.</p>
                         <button class="btn btn-primary" onclick="showForm('Paket 2', 'Rp 150.000/bulan')">Beli Sekarang</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="Wifi.png" class="card-img-top" alt="Paket 3">
+                    <img src="lgwifi.png" class="card-img-top" alt="Paket 3">
                     <div class="card-body">
                         <h5 class="card-title">Paket 3</h5>
-                        <p class="card-text">Kecepatan hingga 50 Mbps. Harga Rp 250.000/bulan.</p>
+                        <p class="card-text">Kecepatan hingga 60 Mbps. Harga Rp 250.000/bulan.</p>
                         <button class="btn btn-primary" onclick="showForm('Paket 3', 'Rp 250.000/bulan')">Beli Sekarang</button>
                     </div>
                 </div>
@@ -386,7 +400,7 @@ button[type="button"] {
 </section>
      
      
-        <p>&copy; 2024 K NETWORK. All Rights Reserved.</p>
+        <p>&copy; 2024 ADIT WIFI.OP All Rights Reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
